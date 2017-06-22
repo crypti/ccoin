@@ -32,6 +32,8 @@ Type: `string`<br />
 
 A comma-delimited list of the currencies you want to *convert to*.
 
+**Tip:** For a list of 3-letter symbols you can use with this module see [cryptocurrencies](https://github.com/radiovisual/cryptocurrencies).
+
 ## Related
 
 [eth-price](https://github.com/crypti/eth-price) - Fetch and compare current ETH price to other currencies/cryptocurrencies in your terminal.
