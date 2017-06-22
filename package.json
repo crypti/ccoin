@@ -23,7 +23,12 @@
   "keywords": [
     "cli-app",
     "cli",
-    ""
+    "ccoin",
+    "terminal",
+    "cryptocoin",
+    "crypto",
+    "fetch",
+    "get"
   ],
   "dependencies": {
     "chalk": "^1.1.3",
