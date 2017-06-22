@@ -29,7 +29,7 @@ const to = values.join(',');
 ccoin(from, to)
 	.then(prices => {
 		spinner.stop();
-		console.log(`\n${chalk.cyan(from)} ⇒`);
+		console.log(`${chalk.cyan(from)} ⇒`);
 
 		prices.forEach((price, index) => {
 			const parts = price.split(':');
