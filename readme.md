@@ -34,7 +34,7 @@ A comma-delimited list of the currencies you want to *convert to*.
 
 ## Related
 
-[eth-price](https://github.com/crypti/eth-price) - Fetch and compare current ETH price to other cryptocurrencies in your terminal.
+[eth-price](https://github.com/crypti/eth-price) - Fetch and compare current ETH price to other currencies/cryptocurrencies in your terminal.
 
 ## License
 
