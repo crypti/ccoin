@@ -26,11 +26,17 @@
     ""
   ],
   "dependencies": {
-    "meow": "^3.7.0"
+    "chalk": "^1.1.3",
+    "cryptocompare": "^0.1.0",
+    "meow": "^3.7.0",
+    "no-whitespace": "^1.0.0",
+    "node-fetch": "^1.7.1",
+    "ora": "^1.3.0"
   },
   "devDependencies": {
     "ava": "^0.17.0",
     "coveralls": "^2.11.12",
+    "nock": "^9.0.13",
     "nyc": "^10.0.0",
     "xo": "^0.17.0"
   },

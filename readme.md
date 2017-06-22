@@ -17,11 +17,26 @@ $ npm install --save ccoin
 const ccoin = require('ccoin');
 
 ccoin('btc', 'eth,usd,ltc');
+//=> [ 'ETH: 8.4', 'USD: 2667.43', 'LTC: 58.11' ]
 ```
 
 ## API
 
-### ccoin()
+### ccoin(from, to)
+
+Returns an array with price conversion data.
+
+#### from
+
+Type: `string`<br />
+
+The 3-letter currency symbol you want to *convert from*.
+
+#### to
+
+Type: `string`<br />
+
+A comma-delimited list of the currencies you want to *convert to*.
 
 ## Related
 
