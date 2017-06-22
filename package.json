@@ -9,6 +9,11 @@
       "name": "Brandon Him",
       "email": "brandonhim@live.com",
       "url": "github.com/brh55"
+    },
+    {
+      "name": "Michael Wuergler",
+      "email": "senjudev@gmail.com",
+      "url": "github.com/radiovisual"
     }
   ],
   "bin": "cli.js",
