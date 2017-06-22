@@ -4,11 +4,13 @@
   "description": "Convert and fetch the cost of cryptocurrencies within your terminal",
   "license": "MIT",
   "repository": "crypti/ccoin",
-  "author": {
-    "name": "Brandon Him",
-    "email": "brh55@drexel.edu",
-    "url": "github.com/crypti/ccoin"
-  },
+  "contributors": [
+    {
+      "name": "Brandon Him",
+      "email": "brandonhim@live.com",
+      "url": "github.com/brh55"
+    }
+  ],
   "bin": "cli.js",
   "engines": {
     "node": ">=4"
