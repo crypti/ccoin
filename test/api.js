@@ -18,3 +18,9 @@ test('fetches price data', async t => {
 	t.is(typeof prices, 'object');
 	t.is(Object.keys(prices).length, 3);
 });
+
+test('forgives whitespace in currency list', async t => {
+	const prices = await fn('btc', 'eth,   usd,     ltc');
+	t.is(typeof prices, 'object');
+	t.is(Object.keys(prices).length, 3);
+});
