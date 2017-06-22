@@ -1,10 +1,18 @@
 'use strict';
-module.exports = (input, opts) => {
-	if (typeof input !== 'string') {
-		throw new TypeError(`Expected a string, got ${typeof input}`);
+const condense = require('no-whitespace');
+const ccompare = require('cryptocompare');
+global.fetch = require('node-fetch');
+
+module.exports = (from, to) => {
+	if (typeof from !== 'string' || typeof to !== 'string') {
+		throw new TypeError(`ccoin expects two string parameters, got ${typeof from}, ${typeof to}`);
 	}
 
-	opts = opts || {};
+	const f = from.toUpperCase();
+	const t = to.split(',').map(x => condense(x.toUpperCase()));
 
-	return input + ' & ' + (opts.postfix || 'rainbows');
+	return ccompare.price(f, t)
+	.then(prices => {
+		return Object.keys(prices).map(symbol => `${symbol}: ${prices[symbol]}`);
+	});
 };
