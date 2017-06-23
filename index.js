@@ -8,11 +8,35 @@ module.exports = (from, to) => {
 		throw new TypeError(`ccoin expects two string parameters, got ${typeof from}, ${typeof to}`);
 	}
 
-	const f = from.toUpperCase();
-	const t = to.split(',').map(x => condense(x.toUpperCase()));
+	const arrify = str => {
+		return str.split(',').map(x => condense(x.toUpperCase()));
+	};
 
-	return ccompare.price(f, t)
-	.then(prices => {
-		return Object.keys(prices).map(symbol => `${symbol}: ${prices[symbol]}`);
+	const f = arrify(from);
+	const t = arrify(to);
+
+	return Promise.all(f.map(fromSymbol => {
+		return ccompare.price(fromSymbol, t)
+		.then(prices => {
+			const results = {
+				from: fromSymbol,
+				to: []
+			};
+
+			Object.keys(prices).forEach(symbol => {
+				if (symbol !== fromSymbol) {
+					results.to.push(`${symbol}: ${prices[symbol]}`);
+				}
+			});
+			return results;
+		});
+	}))
+	.then(results => {
+		// console.log('results', results);
+		const final = {};
+		results.forEach(obj => {
+			final[obj.from] = obj.to;
+		});
+		return final;
 	});
 };

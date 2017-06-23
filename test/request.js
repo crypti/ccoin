@@ -20,6 +20,6 @@ test('Get prices in format', async t => {
 	t.plan(2);
 
 	const prices = await fn('btc', 'usd,eur');
-	t.is(prices[0], 'USD: 200.01');
-	t.is(prices[1], 'EUR: 200.02');
+	t.is(prices.BTC[0], 'USD: 200.01');
+	t.is(prices.BTC[1], 'EUR: 200.02');
 });
