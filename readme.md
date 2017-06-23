@@ -7,30 +7,23 @@
 ## Install
 
 ```
-$ npm install --global ccoin
+$ npm install --global @crypti/ccoin
 ```
 
 ## Usage
 
 ```
-$ ccoin [from] [to]
+Usage
+  $ ccoin -f=[fromSymbols] -t=[toSymbols]
+
+Options
+  -f, --from     A comma-delimited list of symbols to convert from
+  -t, --to       A comma-delimited list of symbols to convert to
+
+Examples
+  $ ccoin -f=BTC -t=ETH,USD,LTC
+  $ ccoin --from=BTC,ETH --to=USD,LTC,EUR
 ```
-
-## API
-
-### ccoin [from] [to]
-
-#### from
-
-Type: `string`<br />
-
-The 3-letter currency symbol you want to *convert from*.
-
-#### to
-
-Type: `string`<br />
-
-A comma-delimited list of the currencies you want to *convert to*.
 
 **Tip:** For a list of 3-letter symbols you can use with this module see [cryptocurrencies](https://github.com/radiovisual/cryptocurrencies).
 
