@@ -10,15 +10,15 @@ spinner.color = 'magenta';
 
 const cli = meow(`
 	Usage
-		$ ccoin -f=[fromSymbols] -t=[toSymbols]
+    $ ccoin -f=[fromSymbols] -t=[toSymbols]
 
 	Options
-	-f, --from     A comma-delimited list of symbols to convert from
-	-t, --to       A comma-delimited list of symbols to convert to
+    -f, --from     A comma-delimited list of symbols to convert from
+    -t, --to       A comma-delimited list of symbols to convert to
 
 	Examples
-			$ ccoin -f=BTC -t=ETH,USD,LTC
-			$ ccoin --from=BTC,ETH --to=USD,LTC,EUR
+    $ ccoin -f=BTC -t=ETH,USD,LTC
+    $ ccoin --from=BTC,ETH --to=USD,LTC,EUR
 `, {
 	alias: {
 		f: 'from',
