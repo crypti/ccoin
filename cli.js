@@ -7,6 +7,7 @@ const chalk = require('chalk');
 const empty = require('is-empty');
 const profiles = require('./profiles.json');
 const saveProfile = require('./bin/save-profile');
+const removeProfile = require('./bin/remove-profile');
 const ccoin = require('.');
 
 const spinner = ora('Fetching prices');
@@ -26,6 +27,7 @@ const cli = meow(`
     -t, --to           A comma-delimited list of symbols to convert to
     -s, --save         Save this as a named profile
     -d, --set-default  Set this as the default profile
+    -r, --remove       Remove a named profile
 
 	Examples
     $ ccoin -f=BTC -t=ETH,USD,LTC
@@ -35,7 +37,8 @@ const cli = meow(`
 		f: 'from',
 		t: 'to',
 		s: 'save',
-		d: 'set-default'
+		d: 'set-default',
+		r: 'remove'
 	}
 });
 
@@ -46,6 +49,19 @@ const profileNames = Object.keys(profiles);
 // User has supplied a valid profile name, so let's load the profile.
 if (input && profileNames.indexOf(input.toString()) > -1) {
 	load(profiles[input].from, profiles[input].to);
+}
+
+// Remove a named profile
+else if (flags.remove && profileNames.indexOf(flags.remove) > -1) {
+	removeProfile(flags.remove).then(() => {
+		console.log(chalk.magenta('Removed profile:'), flags.remove);
+	});
+}
+
+// Show an error when atempting to remove a profile that doesn't exist
+else if (flags.remove && profileNames.indexOf(flags.remove) === -1) {
+	console.log(chalk.magenta('Error:'), `There is no profile named ${chalk.yellow(flags.remove)}.`);
+	process.exit(1);
 }
 
 // List the profiles

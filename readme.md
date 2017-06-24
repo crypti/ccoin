@@ -26,6 +26,7 @@ Options
   -t, --to           A comma-delimited list of symbols to convert to
   -s, --save         Save this as a named profile
   -d, --set-default  Set this as the default profile
+  -r, --remove       Remove a named profile
 
 Examples
   $ ccoin -f=BTC -t=ETH,USD,LTC
@@ -85,6 +86,15 @@ load the default profile by name, so both of these examples will load the defaul
 ```
 $ ccoin
 $ ccoin default
+```
+
+### To Remove a Profile
+
+Use the `--remove` option or `-r` flag to remove a named Profile (both examples are equivalent):
+
+```
+$ ccoin -r=yen
+$ ccoin --remove=yen
 ```
 
 ## Related
