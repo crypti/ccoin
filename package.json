@@ -26,7 +26,8 @@
   "files": [
     "index.js",
     "cli.js",
-    "profiles.json"
+    "profiles.json",
+    "bin"
   ],
   "keywords": [
     "cli-app",
