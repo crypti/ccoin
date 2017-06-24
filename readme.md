@@ -14,18 +14,25 @@ $ npm install --global @crypti/ccoin
 
 ```
 Usage
-  $ ccoin -f=[fromSymbols] -t=[toSymbols]
+  $ ccoin [Commands]
+  $ ccoin -f=[fromSymbols] -t=[toSymbols] [options]
+
+Commands
+  ls                 List all saved profiles
+  [profile name]     Load the given profile by name
 
 Options
-  -f, --from     A comma-delimited list of symbols to convert from
-  -t, --to       A comma-delimited list of symbols to convert to
+  -f, --from         A comma-delimited list of symbols to convert from
+  -t, --to           A comma-delimited list of symbols to convert to
+  -s, --save         Save this as a named profile
+  -d, --set-default  Set this as the default profile
 
 Examples
   $ ccoin -f=BTC -t=ETH,USD,LTC
   $ ccoin --from=BTC,ETH --to=USD,LTC,EUR
 ```
 
-**Tip:** For a list of 3-letter symbols you can use with this module see [cryptocurrencies](https://github.com/radiovisual/cryptocurrencies).
+**Tip:** For a list of 3-letter symbols you can use with this module see [cryptocurrencies](https://github.com/crypti/cryptocurrencies).
 
 ## Related
 
