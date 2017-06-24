@@ -61,17 +61,13 @@ else if (flags.remove && profileNames.indexOf(flags.remove) > -1) {
 // Show an error when atempting to remove a profile that doesn't exist
 else if (flags.remove && profileNames.indexOf(flags.remove) === -1) {
 	console.log(chalk.magenta('Error:'), `There is no profile named ${chalk.yellow(flags.remove)}.`);
+	list();
 	process.exit(1);
 }
 
 // List the profiles
 else if (input && input[0] === 'ls') {
-	console.log(chalk.magenta('Available Profiles:'));
-	profileNames.forEach(name => {
-		const profile = profiles[name];
-		const line = `-f=${profile.from} -t=${profile.to}`;
-		console.log(`  ${chalk.cyan(name)}: ${chalk.gray(line)}`);
-	});
+	list();
 }
 
 // You cannot set a profile name using reserved command names
@@ -156,4 +152,19 @@ function load(from, to) {
 				});
 			});
 		});
+}
+
+/**
+ * List off all the named profiles
+ */
+function list() {
+	console.log(chalk.magenta('Available Profiles:'));
+	if (empty(profileNames)) {
+		console.log(`  ${chalk.gray('None')}`);
+	}
+	profileNames.forEach(name => {
+		const profile = profiles[name];
+		const line = `-f=${profile.from} -t=${profile.to}`;
+		console.log(`  ${chalk.cyan(name)}: ${chalk.gray(line)}`);
+	});
 }
