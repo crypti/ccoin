@@ -34,6 +34,59 @@ Examples
 
 **Tip:** For a list of 3-letter symbols you can use with this module see [cryptocurrencies](https://github.com/crypti/cryptocurrencies).
 
+## Profiles
+
+Profiles are a handy way to save `--from` and `--to` options without having to type
+them manually everytime.
+
+### To Save a Profile
+
+Use the `--save` option or `-s` flag to save a profile by name (both examples are equivalent):
+
+```
+$ ccoin -f=BTC,ETH -t=USD,JPY --save=yen
+$ ccoin -f=BTC,ETH -t=USD,JPY -s=yen
+```
+
+### To Load a Profile
+
+Once you have a profile saved, you can just call it by name:
+
+```
+$ ccoin yen
+```
+
+### To List All Available Profiles
+
+Use the `ls` command to list all your available Profiles:
+
+```
+$ ccoin ls
+Available Profiles:
+  yen: -f=BTC,ETH -t=USD,JPY
+```
+
+### To Set a Default Profile
+
+You can set a default profile with the `--set-default` option or the `-d` flag (both examples are equivalent):
+
+```
+$ ccoin -f=BTC,ETH -t=USD,JPY -d
+$ ccoin -f=BTC,ETH -t=USD,JPY --set-default
+```
+
+### To Load the Default Profile
+
+If you have a default profile set, then you don't have to do anything, you can just type
+`ccoin` at the terminal and your default profile will be loaded. However, you can also
+load the default profile by name, so both of these examples will load the default profile
+(if one has been supplied):
+
+```
+$ ccoin
+$ ccoin default
+```
+
 ## Related
 
 [eth-price](https://github.com/crypti/eth-price) - Fetch and compare current ETH price to other currencies/cryptocurrencies in your terminal.
