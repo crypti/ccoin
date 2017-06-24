@@ -1,6 +1,6 @@
 {
   "name": "@crypti/ccoin",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Convert and fetch the cost of cryptocurrencies within your terminal",
   "license": "MIT",
   "repository": "crypti/ccoin",
