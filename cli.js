@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 /* eslint brace-style:0 */
 'use strict';
+const fs = require('fs');
 const meow = require('meow');
 const ora = require('ora');
 const chalk = require('chalk');
 const empty = require('is-empty');
-const profiles = require('./profiles.json');
+
 const saveProfile = require('./bin/save-profile');
 const removeProfile = require('./bin/remove-profile');
+const profilePath = require('./bin/profile-path');
 const ccoin = require('.');
 
 const spinner = ora('Fetching prices');
@@ -44,6 +46,7 @@ const cli = meow(`
 
 const input = cli.input;
 const flags = cli.flags;
+const profiles = JSON.parse(fs.readFileSync(profilePath()).toString());
 const profileNames = Object.keys(profiles);
 
 // User has supplied a valid profile name, so let's load the profile.

@@ -97,10 +97,6 @@ $ ccoin -r=yen
 $ ccoin --remove=yen
 ```
 
-## Known Issues
-
-- Profiles are deleted after updating / reinstalling ccoin. ([#9](https://github.com/crypti/ccoin/issues/9))
-
 ## Related
 
 [eth-price](https://github.com/crypti/eth-price) - Fetch and compare current ETH price to other currencies/cryptocurrencies in your terminal.

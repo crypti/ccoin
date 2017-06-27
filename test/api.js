@@ -1,5 +1,4 @@
 import test from 'ava';
-import profiles from '../profiles';
 import fn from '../';
 
 test('expects string parameters', t => {
@@ -41,8 +40,4 @@ test('forgives whitespace in currency list', async t => {
 	t.is(Object.keys(prices).length, 1);
 	t.is(Array.isArray(prices.BTC), true);
 	t.is(prices.BTC.length, 3);
-});
-
-test('profiles are empty', t => {
-	t.is(Object.keys(profiles).length, 0);
 });
