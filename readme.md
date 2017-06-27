@@ -97,6 +97,12 @@ $ ccoin -r=yen
 $ ccoin --remove=yen
 ```
 
+___
+
+:bulb: **Pro Tip:** The profiles are saved in your computer's home directory with
+the filename `.ccoin-profiles.json`, so you can edit your profiles manually, just
+remember that the file needs to be [valid JSON](https://jsonlint.com/).
+
 ## Related
 
 [eth-price](https://github.com/crypti/eth-price) - Fetch and compare current ETH price to other currencies/cryptocurrencies in your terminal.
