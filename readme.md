@@ -2,7 +2,7 @@
 
 > Convert and fetch the price conversions of cryptocurrencies within your terminal
 
-![demo](media/demo.gif)
+![demo](media/demo2.gif)
 
 ## Install
 
