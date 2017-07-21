@@ -104,9 +104,14 @@ the filename `.ccoin-profiles.json`, so you can edit your profiles manually, jus
 remember that the file needs to be [valid JSON](https://jsonlint.com/).
 
 ## Related
+Do you like this project? Please check out our other available projects and tools on [Crypti](https://github.com/crypti)!
 
-[eth-price](https://github.com/crypti/eth-price) - Fetch and compare current ETH price to other currencies/cryptocurrencies in your terminal.
+- [ccnews](https://github.com/crypti/ccnews) - 📰 Grab trending cryptocurrency news from Google within your terminal using their associated token symbol (over 1000+ supported symbols)
+- [eth-price](https://github.com/crypti/eth-price) - 💫 A CLI app to grab the current ETH price from your terminal in USD and/or other cryptocurrency symbols
+- [cryptocurrencies](https://github.com/crypti/cryptocurrencies) - 📋 Get a list of all the cryptocurrency symbols and names.
+
+## Contributors
+PRs are welcomed 💃🏽! Feel free to submit to this or any of our repositories.
 
 ## License
-
-MIT © [Crypti Team](https://github.com/crypti/ccoin)
+MIT © [Crypti Team](https://github.com/crypti)
